@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'everis';
+  public usuario : string = "";
+  public status : boolean = false;
+
+  public loginSuccess(data : any) {
+    this.usuario = data.user;
+    this.status = data.logged;
+  }
 }
